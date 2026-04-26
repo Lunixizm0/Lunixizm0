@@ -34,4 +34,4 @@ I'm a dedicated Cybersecurity Professional, with hands-on experience in Tryhackm
 
 ## 🌐 Connect with Me
 
-[![Mail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:Lunixizm@proton.me)
+[![Mail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:lunix@lunixizm.website)
