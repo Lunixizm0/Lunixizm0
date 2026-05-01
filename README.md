@@ -2,7 +2,7 @@
 
 ## 🧑‍💻 Introduction
 
-I'm a dedicated Cybersecurity Professional, with hands-on experience in Tryhackme. My core mission is build otonom systems for making everything more safer I thrive on solving complex challenges, conducting vulnerability assessments.
+I'm a dedicated Cybersecurity Professional, with hands-on experience in Tryhackme. My core mission is finding vulnerabilities on massive ecosystems. I thrive on solving complex challenges, conducting vulnerability assessments.
 
 ---
 
@@ -18,16 +18,15 @@ I'm a dedicated Cybersecurity Professional, with hands-on experience in Tryhackm
 
 - **Programming:** C, JavaScript, Python, Shell Script, Bash
 - **Cloud Platforms:** Google Cloud, AWS
-- **Frameworks/Tools:** Django, MySQL, CRM Software
-- **Security:** Encryption, Endpoint Security, Detection & Response, Cloud Security, Incident Response
-- **Building:** Malware, Development tools, Scripts, Info grabber
+- **Security:** Endpoint Security, Detection & Response, Cloud Security, Incident Response
+- **Building:** Malware, Development tools, Scripts, Info grabbers
 
 ---
 
 ## 🌱 Outside Tech
 
 - 👨‍🎓 Student
-- 🛌 Fall in Love to Sleeping
+- 🛌 Fall in Love with Sleeping
 - 🐧 Love Linux and ALL Linux Based Things 
 
 ---
@@ -35,3 +34,5 @@ I'm a dedicated Cybersecurity Professional, with hands-on experience in Tryhackm
 ## 🌐 Connect with Me
 
 [![Mail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:lunix@lunixizm.website)
+
+[![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/utku-ceylan-)
