@@ -1,38 +1,92 @@
-# Hi, I'm Lunixizm from Turkey  🇹🇷
+# Hi, I'm Utku Ceylan (Lunixizm)
 
-##  Introduction
+Independent security researcher focused on **Linux security, vulnerability research, and open-source ecosystem security**.
 
-I'm a dedicated Cybersecurity Professional, with real hands-on experience. My core mission is finding vulnerabilities on massive ecosystems. I thrive on solving complex challenges, conducting vulnerability assessments.
+I work on analyzing Linux-based systems, finding security issues, and contributing to responsible disclosure processes.
 
----
+## About Me
 
-##  What I Do
+- Security researcher focused on Linux and open-source software
+- Interested in Linux internals, system security, and vulnerability research
+- Building security tools and system utilities
+- Computer Technologies student
+- Cyber Security & Software Team Captain at ThinkTank Software
 
-- Penetration Testing & Incident Response  
-- Endpoint & Cloud Security Solutions  
-- Automation with Python, Bash, & Shell scripting
+## Security Research
 
----
+My research mainly focuses on:
 
-## Skills
+- Linux security analysis
+- Access control and authorization models
+- Privilege boundaries
+- Service-level attack surfaces
+- Open-source software security
 
-- **Programming:** C, JavaScript, Python, Shell Script
-- **Cloud Platforms:** Google Cloud, AWS
-- **Security:** Endpoint Security, Detection & Response, Cloud Security
-- **Building:** Malware, Development tools, Scripts, Info grabbers
+I have reported multiple security findings affecting the **Pardus, Pardus ETAP / LiderAhenk ecosystem** through responsible disclosure processes.
 
----
+Technical details of unpublished findings remain private until coordinated disclosure is completed.
 
-## Outside Tech
+## Projects
 
-- Student
-- Just Sleeping
-- Love Linux and ALL Linux Based Things 
+### ahenk-debug
 
----
+Linux diagnostic CLI tool for Pardus ETAP environments.
 
-## 🌐 Connect with Me
+Features:
 
-[![Mail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:github@lunixizm.website)
+- Ahenk agent diagnostics
+- Pulsar / XMPP connectivity checks
+- LDAP and identity validation
+- System health checks
+- JSON reporting
+- Debian package distribution
 
-[![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/utku-ceylan-)
+### Walkie
+
+LAN-based communication application.
+
+Features:
+
+- Encrypted messaging
+- Voice communication
+- Automatic peer discovery
+- Decentralized local network communication
+
+### Teles3
+
+AES-GCM based chunked encryption tool designed for transferring large data over limited communication channels.
+
+## Technologies
+
+### Programming
+- Python
+- Shell Script
+
+### Linux & Systems
+- Linux Internals
+- Debian Packaging
+- System Debugging
+- CLI Development
+
+### Security
+- Vulnerability Research
+- Linux Security
+- Responsible Disclosure
+- Network Security
+
+### Tools
+- Git
+- Docker
+- Podman
+- GitHub Actions
+
+## Links
+
+Website  
+https://lunixizm.website
+
+LinkedIn  
+https://www.linkedin.com/in/utku-ceylan-/
+
+Email  
+github@lunixizm.website
