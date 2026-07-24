@@ -26,60 +26,6 @@ I have reported multiple security findings affecting the **Pardus, Pardus ETAP /
 
 Technical details of unpublished findings remain private until coordinated disclosure is completed.
 
-## Projects
-
-### ahenk-debug
-
-Linux diagnostic CLI tool for Pardus ETAP environments.
-
-Features:
-
-- Ahenk agent diagnostics
-- Pulsar / XMPP connectivity checks
-- LDAP and identity validation
-- System health checks
-- JSON reporting
-- Debian package distribution
-
-### Walkie
-
-LAN-based communication application.
-
-Features:
-
-- Encrypted messaging
-- Voice communication
-- Automatic peer discovery
-- Decentralized local network communication
-
-### Teles3
-
-AES-GCM based chunked encryption tool designed for transferring large data over limited communication channels.
-
-## Technologies
-
-### Programming
-- Python
-- Shell Script
-
-### Linux & Systems
-- Linux Internals
-- Debian Packaging
-- System Debugging
-- CLI Development
-
-### Security
-- Vulnerability Research
-- Linux Security
-- Responsible Disclosure
-- Network Security
-
-### Tools
-- Git
-- Docker
-- Podman
-- GitHub Actions
-
 ## Links
 
 Website  
