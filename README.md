@@ -22,10 +22,6 @@ My research mainly focuses on:
 - Service-level attack surfaces
 - Open-source software security
 
-I have reported multiple security findings affecting the **Pardus, Pardus ETAP / LiderAhenk ecosystem** through responsible disclosure processes.
-
-Technical details of unpublished findings remain private until coordinated disclosure is completed.
-
 ## Links
 
 Website  
