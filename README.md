@@ -12,16 +12,6 @@ I work on analyzing Linux-based systems, finding security issues, and contributi
 - Computer Technologies student
 - Cyber Security & Software Team Captain at ThinkTank Software
 
-## Security Research
-
-My research mainly focuses on:
-
-- Linux security analysis
-- Access control and authorization models
-- Privilege boundaries
-- Service-level attack surfaces
-- Open-source software security
-
 ## Links
 
 Website  
