@@ -1,24 +1,6 @@
-# Hi, I'm Utku Ceylan (Lunixizm)
-
-Independent security researcher focused on **Linux security, vulnerability research, and open-source ecosystem security**.
-
-I work on analyzing Linux-based systems, finding security issues, and contributing to responsible disclosure processes.
-
-## About Me
-
-- Security researcher focused on Linux and open-source software
-- Interested in Linux internals, system security, and vulnerability research
-- Building security tools and system utilities
-- Computer Technologies student
-- Cyber Security & Software Team Captain at ThinkTank Software
-
-## Links
-
-Website  
-https://lunixizm.website
-
-LinkedIn  
-https://www.linkedin.com/in/utku-ceylan-/
-
-Email  
-github@lunixizm.website
+<a href="https://github.com/Lunixizm0/Lunixizm0">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Lunixizm0/Lunixizm0/main/dark_mode.svg">
+    <img alt="Lunixizm0's GitHub Profile README" src="https://raw.githubusercontent.com/Lunixizm0/Lunixizm0/main/light_mode.svg">
+  </picture>
+</a>
