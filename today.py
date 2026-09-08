@@ -18,7 +18,9 @@ class GitHubAPIError(Exception):
 # Repository permissions: read:Commit statuses, read:Contents, read:Issues, read:Metadata, read:Pull Requests
 HEADERS = {'authorization': 'token '+ os.environ['ACCESS_TOKEN']}
 USER_NAME = os.environ['USER_NAME'] # 'Lunixizm0'
-QUERY_COUNT = {'user_getter': 0, 'graph_repos_stars': 0, 'recursive_loc': 0, 'loc_query': 0, 'issues_getter': 0}
+QUERY_COUNT = {'user_getter': 0, 'graph_repos_stars': 0, 'recursive_loc': 0, 'loc_query': 0, 'issues_getter': 0, 'projects_getter': 0}
+
+PROJECT_NAMES = ['Storefront-Research', 'CopySec', 'firebase-dumper', 'linux-autoruns']
 
 
 def simple_request(func_name, query, variables):
@@ -221,7 +223,7 @@ def force_close_file(data):
         f.writelines(data)
 
 
-def svg_overwrite(filename, commit_data, repo_data, contrib_data, issue_data, loc_data):
+def svg_overwrite(filename, commit_data, repo_data, contrib_data, issue_data, loc_data, projects):
     TARGET = 63
     tree = etree.parse(filename)
     root = tree.getroot()
@@ -249,6 +251,17 @@ def svg_overwrite(filename, commit_data, repo_data, contrib_data, issue_data, lo
     find_and_replace(root, 'loc_del', loc_del)
     loc_suffix = f' ( {loc_add}++,  {loc_del}-- )'
     set_dots(root, 'loc_data_dots', TARGET - 26 - len(loc_total) - len(loc_suffix))
+    # Projects / Descriptions
+    for index, (name, desc) in enumerate(projects, start=1):
+        desc = (desc or '').strip()
+        max_desc = TARGET - 6 - len(name)
+        if desc and len(desc) > max_desc:
+            desc = desc[:max_desc-1] + '\u2026'
+        elif len(desc) > max_desc:
+            desc = desc[:max(0, max_desc)]
+        find_and_replace(root, f'project{index}', desc)
+        available = max(3, TARGET - 3 - len(name) - len(desc))
+        set_dots(root, f'project{index}', available)
     tree.write(filename, encoding='utf-8', xml_declaration=True)
 
 
@@ -306,6 +319,31 @@ def issues_getter(username):
     return data['allIssues']['totalCount'], data['openIssues']['totalCount'], data['closedIssues']['totalCount']
 
 
+def projects_getter(username):
+    query_count('projects_getter')
+    query = '''
+    query($login: String!){
+        user(login: $login) {
+            repositories(first: 100, ownerAffiliations: [OWNER]) {
+                edges {
+                    node {
+                        ... on Repository {
+                            name
+                            description
+                        }
+                    }
+                }
+            }
+        }
+    }'''
+    request = simple_request(projects_getter.__name__, query, {'login': username})
+    repos = {}
+    for edge in request.json()['data']['user']['repositories']['edges']:
+        node = edge['node']
+        repos[node['name']] = (node['description'] or '').strip()
+    return [(name, repos.get(name, '')) for name in PROJECT_NAMES]
+
+
 def query_count(funct_id):
     QUERY_COUNT[funct_id] += 1
 
@@ -339,16 +377,18 @@ if __name__ == '__main__':
     repo_data, repo_time = perf_counter(graph_repos_stars, ['OWNER'])
     contrib_data, contrib_time = perf_counter(graph_repos_stars, ['OWNER', 'COLLABORATOR', 'ORGANIZATION_MEMBER'])
     issue_data, issue_time = perf_counter(issues_getter, USER_NAME)
+    projects_data, projects_time = perf_counter(projects_getter, USER_NAME)
+    formatter('projects', projects_time)
 
     for index in range(len(total_loc)-1): total_loc[index] = f'{total_loc[index]:,}' # format added, deleted, and total LOC
 
-    svg_overwrite('dark_mode.svg', commit_data, repo_data, contrib_data, issue_data, total_loc[:-1])
-    svg_overwrite('light_mode.svg', commit_data, repo_data, contrib_data, issue_data, total_loc[:-1])
+    svg_overwrite('dark_mode.svg', commit_data, repo_data, contrib_data, issue_data, total_loc[:-1], projects_data)
+    svg_overwrite('light_mode.svg', commit_data, repo_data, contrib_data, issue_data, total_loc[:-1], projects_data)
 
     # move cursor to override 'Calculation times:' with 'Total function time:' and the total function time, then move cursor back
-    print('\033[F\033[F\033[F\033[F\033[F\033[F\033[F',
-        f"{'Total function time:':<21}", f'{user_time + loc_time + commit_time + repo_time + contrib_time + issue_time:>11.4f}',
-        ' s \033[E\033[E\033[E\033[E\033[E\033[E\033[E', sep='')
+    print('\033[F\033[F\033[F\033[F\033[F\033[F\033[F\033[F',
+        f"{'Total function time:':<21}", f'{user_time + loc_time + commit_time + repo_time + contrib_time + issue_time + projects_time:>11.4f}',
+        ' s \033[E\033[E\033[E\033[E\033[E\033[E\033[E\033[E', sep='')
 
     print('Total GitHub GraphQL API calls:', f'{sum(QUERY_COUNT.values()):>3}')
     for funct_name, count in QUERY_COUNT.items(): print(f"{'   ' + funct_name + ':':<28}", f'{count:>6}')
