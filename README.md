@@ -1,42 +1,96 @@
-<h1 align="center">Lunix</h1>
+# Utku Ceylan
 
-<p align="center">
-  <strong>Security Researcher</strong>
-</p>
+I research security vulnerabilities in Linux systems and open-source software, with a focus on root cause analysis, privilege boundaries, and responsible disclosure.
 
-<p align="center">
-  <a href="https://lunixizm.website">Website</a> •
-  <a href="https://www.linkedin.com/in/utku-ceylan-/">LinkedIn</a> •
-  <a href="https://github.com/Lunixizm0">GitHub</a>
-</p>
+**1st Place - TEKNOFEST 2026 Pardus Bug Hunting & Improvement Competition**
+
+**Cyber Security & Software Team Captain at ThinkTank**
+
+[TEKNOFEST Results](https://teknofest.org/tr/duyurular/pardus-hata-yakalama-ve-oneri-yarismasi-kazanan-takimlar-aciklandi-3/)
 
 ---
 
-## About
+## What I Do
 
-I'm **Utku Ceylan** A.K.A. **Lunix**, an independent security researcher and Computer Technologies student focused on **Linux security, vulnerability research, and open-source software security**.
+My work focuses on finding, understanding, and documenting security issues in real-world Linux and open-source software.
 
-I'm also the **Cyber Security & Software Team Captain at ThinkTank Software**, where I work on security research and software projects alongside other technical work.
+I also build software around the problems I investigate, turning research into practical tools rather than isolated proof-of-concepts.
 
-Some of my security research is public. Research that is still under coordinated disclosure stays private until publication is appropriate.
+---
 
-### Public research
+## Security Research
 
-- [Security Research](https://github.com/Lunixizm0/security-research) - public vulnerability writeups, root-cause analysis, PoCs, impact analysis, and disclosure notes.
+### Pardus / ETAP
+
+I conduct security research across components of the Pardus & ETAP ecosystem, focusing on privilege boundaries, privileged services, authorization mechanisms, and unsafe external input handling.
+
+Research will be published progressively and only when disclosure permits. Probably after a very long time.
+
+---
 
 ## Selected Projects
 
-| Project | What I built |
-|---|---|
-| [Advisory-RSS](https://github.com/Lunixizm0/Advisory-RSS) | Security advisory aggregation pipeline for GitHub and CERT-TR with normalization, encrypted credential storage, persistent caching, and a local RSS feed. |
-| [Storefront Research](https://github.com/Lunixizm0/Storefront-Research) | Research into how large Turkish e-commerce storefronts expose product data through **HTML, JSON-LD, embedded state, internal APIs, and GraphQL**. |
-| [CopySec](https://github.com/Lunixizm0/CopySec) | Windows clipboard protection using **delayed rendering**, foreground-process policy, process-tree checks, and JSONL auditing. |
-| [Ahenk Debug](https://github.com/Lunixizm0/ahenk-debug) | A diagnostic CLI for **Pardus ETAP / Ahenk** covering service health, identity consistency, broker connectivity, database checks, API probes, and structured reporting. |
-| [linux-autoruns](https://github.com/Lunixizm0/linux-autoruns) | A Linux alternative to Sysinternals Autoruns covering **16 autostart surfaces**, with a PySide6 GUI, filtering, inspection, export, and edit support. |
-| [Walkie](https://github.com/Lunixizm0/Walkie) | A serverless LAN walkie-talkie with peer discovery, encrypted text/voice communication, Opus, and push-to-talk. |
+| Project | Description |
+| --- | --- |
+| **[Advisory-RSS](https://github.com/Lunixizm0/Advisory-RSS)** | Local security advisory aggregator combining GitHub Security Advisories and CERT-TR notifications into an RSS feed. |
+| **[CopySec](https://github.com/Lunixizm0/CopySec)** | Windows clipboard security research tool focused on clipboard ownership, delayed rendering, process boundaries, and race conditions. |
+| **[ahenk-debug](https://github.com/Lunixizm0/ahenk-debug)** | Diagnostic CLI for Pardus ETAP / LiderAhenk environments, covering identity, services, broker connectivity, ETA API validation, and network diagnostics. |
+| **[linux-autoruns](https://github.com/Lunixizm0/linux-autoruns)** | Linux persistence and autostart enumeration across systemd, cron, PAM, udev, D-Bus, GRUB, and other mechanisms. |
+| **[Storefront-Research](https://github.com/Lunixizm0/Storefront-Research)** | Research tooling for analyzing modern web storefront architectures, client-side state, APIs, and GraphQL-based systems. |
+| **[Walkie](https://github.com/Lunixizm0/Walkie)** | Encrypted LAN voice communication application built around low-latency audio transport. |
 
-## Contact
+---
 
-- Website: https://lunixizm.website
-- LinkedIn: https://www.linkedin.com/in/utku-ceylan-/
-- E-mail: github@lunixizm.website
+## TEKNOFEST
+
+### 1st Place · TEKNOFEST 2026
+
+As the Cyber Security & Software Team Captain of **ThinkTank**, I led the team to **1st place in the Pardus Bug Hunting & Improvement Competition** at TEKNOFEST 2026.
+
+Our work focused on identifying and analyzing security issues in the Pardus ecosystem and reporting them through responsible disclosure practices.
+
+[View the official TEKNOFEST announcement](https://teknofest.org/tr/duyurular/pardus-hata-yakalama-ve-oneri-yarismasi-kazanan-takimlar-aciklandi-3/)
+
+---
+
+## Responsible Disclosure
+
+I report security vulnerabilities through appropriate vendor and authority channels and avoid publishing sensitive exploitation details before disclosure is appropriate.
+
+My research process is centered around:
+
+**Root Cause - Impact - Reproduction - Remediation - Disclosure**
+
+---
+
+## Technical Interests
+
+```text
+Security
+├── Vulnerability Research
+├── Linux Security
+├── Authentication / Authorization
+├── Privilege Boundaries
+└── Responsible Disclosure
+
+Systems
+├── Linux
+├── systemd
+├── PolicyKit
+├── SUID / Privileged Services
+└── Endpoint Software
+
+Development
+├── Python
+├── Bash
+└── Linux Tooling
+
+---
+
+Contact
+
+Personal Website: lunixizm.website
+
+GitHub: @Lunixizm0
+
+Email: github@lunixizm.website
