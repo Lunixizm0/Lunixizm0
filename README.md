@@ -8,6 +8,15 @@ I research security vulnerabilities in Linux systems and open-source software, w
 
 [TEKNOFEST Results](https://teknofest.org/tr/duyurular/pardus-hata-yakalama-ve-oneri-yarismasi-kazanan-takimlar-aciklandi-3/)
 
+Finder of CVE-2026-92083 a high-severity (CVSS 3.1: 7.8) missing authorization vulnerability (CWE-862) in pardus-image-writer, developed by TÜBİTAK BİLGEM Yazılım Teknolojileri Araştırma Enstitüsü, that allows local privilege escalation.
+
+Check it out:
+
+| [CVE.org](https://www.cve.org/CVERecord?id=CVE-2026-92083) | 
+[TR-CERT / USOM](https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-26-1532) | 
+[NVD](https://nvd.nist.gov/vuln/detail/cve-2026-92083) | 
+[EUVD](https://euvd.enisa.europa.eu/vulnerability/EUVD-2026-124405) | 
+
 ---
 
 ## What I Do
